@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class Column{
-    public static ArrayList<Column> all = new ArrayList<>();
+public class Row{
+    public static ArrayList<Row> all = new ArrayList<>();
     private final String name;
     private static int length;
     private ArrayList<Double> contents = new ArrayList<>();
-    public Column(String nam, int len){
+    public Row(String nam, int len){
         name = nam;
         length = len;
         all.add(this);
@@ -14,7 +14,7 @@ public class Column{
         if (contents.size() <= length) {
             contents.add(con);
         } else {
-          contents.set(contents.size() - 1, con);
+            contents.set(contents.size() - 1, con);
         }
         return contents;
     }
